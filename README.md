@@ -5,3 +5,6 @@ this is a arduino code that allows the arduino to detect an object using a ultra
 stuff used: arduino uno,ultrasound sensor,buzzer,breadboard,jumper wire(male to male)
 
 port: COM3
+
+
+delay scale: distance(ie whenecho=high) *3+30
