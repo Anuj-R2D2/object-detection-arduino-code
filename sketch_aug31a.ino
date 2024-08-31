@@ -1,7 +1,7 @@
 #define trigPin 6  
 #define echoPin 5
 #define buzzer 2
-float new_delay; 
+float delay1; 
 
 
 void setup() 
@@ -24,13 +24,13 @@ void loop()
   digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin, HIGH);
   distance = (duration/2) / 29.1;
-  new_delay= (distance *3) +30;
+  delay1= (distance *3) +30;
   Serial.print(distance);
   Serial.println("  cm");
   if (distance < 50)
   {
    digitalWrite(buzzer,HIGH);
-   delay(new_delay);
+   delay(delay1);
    digitalWrite(buzzer,LOW);
  
   }
